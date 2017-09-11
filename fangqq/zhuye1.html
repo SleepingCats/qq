@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qq空间</title>
+    <link type="text/css"  rel="stylesheet" href="start.css">
+    <link type="text/css" rel="stylesheet" href="content.css">
+    <script type="text/javascript" src="zhuye1.js"></script>
+    <script type="text/javascript" src="jquery-1.11.3.js"></script>
+</head>
+<body onload="startTime()">
+<form id="from1" method="post">
+    <div  class="start" >
+        <a href="zhuye1.html"> <img class="logo"  src="./image/logo1.png" ></a>
+      <ul class="start1">
+            <li style="background-color: #e09600;" onmouseover="noshowzhuye1();noshowzhuye2();noshowzhuye3();noshowzhuye4()">
+
+               <img src="image/logo2.png"><a href="zhuye1.html" style="text-decoration: none;">个人中心</a>
+            </li>
+            <li  id="li1" onmouseover="showzhuye1();noshowzhuye2();noshowzhuye3();noshowzhuye4();" onclick="LoadXmlDoc()" >
+                <img id="li1-1-1" src="image/logo4.png"><a href="javascript:;" style="text-decoration: none;" id="li1-1">我的主页</a>
+            </li>
+
+            <li id="li2" onmouseover=" showzhuye2();noshowzhuye1();noshowzhuye3();noshowzhuye1()">
+                <img id="li2-1-1" src="image/logo5.png"><a href="" style="text-decoration: none;" id="li2-1">好友</a> </li>
+            <li id="li3" onmouseover="showzhuye3();noshowzhuye2();noshowzhuye4();noshowzhuye1()" >
+                <img id="li3-1-1" src="image/logo6.png"><a href="" style="text-decoration: none;"  id="li3-1"> 游戏</a></li>
+            <li id="li4" onmouseover="showzhuye4();noshowzhuye3();noshowzhuye1();noshowzhuye2()">
+                <img id="li4-1-1" src="image/logo3.png"> <a href="" style="text-decoration: none;"  id="li4-1">装扮</a></li>
+          <li>
+              <div id="music-panel" class="music-panel" onmouseover="music();noshowzhuye4()" onmouseout="musicout()">
+              <b  id="music-play" class="music-play"></b>
+              <b id="music-dynamic" class="music-dynamic"></b>
+              <b id="music-tisi" class="music-tisi">点击设置背景音乐</b>
+          </div></li>
+          <li>
+              <div class="search-box" >
+              <input class="search-input" type="text" placeholder="用户/游戏/动态">
+              <a href="javascript:;" class="search-button" style="display: block;"><img style=" height: 21px;" src="image/search.png"></a></div>
+          </li>
+          <li>
+              <div class="user-info">
+              <div class="shezhi" ><img style="height: 31px; " src="image/shezhi.png"></div>
+              <a  class="user-info3" href="http://pay.qq.com/ipay/index.shtml?c=xxjzgw,xxjzghh&amp;ch=self&amp;aid=zone.tbarshuang"><img src="image/zhuanshi.png"></a>
+          </div></li>
+
+        </ul>
+        <a class="ts" href="http://user.qzone.qq.com/troubleshooter"></a>
+
+       <div onmouseover="showzhuye1()" onmouseout="noshowzhuye1()" id="showzhuye1" class="showzhuye1" style="display: none;">
+           <div class="zhuye1-1">
+               <a><img class="zhuye1-1-1" src="image/zhuye1.png"></a><br>
+               <a class="line-text"><b>主页</b></a>
+           </div>
+           <div  class="line1"></div>
+           <script>
+               for ( var i=0;i<9;i++){
+
+                   $(".line1").after("<div class='zhuye1-1'> <a><img class='zhuye1-1-1' src='image/zhuye2.jpg'></a><br> <a class='line-text'>主页</a> </div>")
+               }
+           </script>
+
+       </div>
+        <div onmouseover="showzhuye2()" onmouseout="noshowzhuye2()" id="showzhuye2" class="showzhuye2" style="display: none;">
+            <div class="zhuye1-1">
+                <a><img class="zhuye1-1-1" src="image/zhuye1.png"></a><br>
+                <a class="line-text" style="margin-left: -10px;"><b>寻找好友</b></a><br>
+                <a ><img style="margin-top: 20px;" class="zhuye1-1-1" src="image/zhuye1.png"></a><br>
+                <a class="line-text" style="margin-left: -10px;"><b>亲密度</b></a>
+            </div>
+            <div  class="line2" ></div>
+            <script>
+                for ( var i=0;i<8;i++){
+
+                    $(".line2").after("<div class='zhuye1-1'> <a><img class='zhuye1-1-1' src='image/zhuye2.jpg'></a><br> <a class='line-text'>好友</a> </div>")
+                }
+            </script>
+        </div>
+        <div onmouseover="showzhuye3()" onmouseout="noshowzhuye3()" id="showzhuye3" class="showzhuye3" style="display: none;">
+            <div class="zhuye1-1">
+                <a><img class="zhuye1-1-1" src="image/zhuye1.png"></a><br>
+                <a class="line-text" style="margin-left: -10px;"><b>游戏商城</b></a><br>
+                <a ><img style="margin-top: 20px;" class="zhuye1-1-1" src="image/zhuye1.png"></a><br>
+                <a class="line-text" style="margin-left: -10px;"><b>找游戏</b></a>
+            </div>
+            <div  class="line3" ></div>
+            <script>
+                for ( var i=0;i<8;i++){
+
+                    $(".line3").after("<div class='zhuye1-1'> <a><img class='zhuye1-1-1' src='image/zhuye2.jpg'></a><br> <a class='line-text'>游戏</a> </div>")
+                }
+            </script>
+        </div>
+        <div onmouseover="showzhuye4()" onmouseout="noshowzhuye4()" id="showzhuye4" class="showzhuye4" style="display: none;">
+            <div class="zhuye1-1">
+                <a><img class="zhuye1-1-1" src="image/zhuye1.png"></a><br>
+                <a class="line-text" style="margin-left: -10px;"><b>一键装扮</b></a><br>
+                <a ><img style="margin-top: 20px;" class="zhuye1-1-1" src="image/zhuye1.png"></a><br>
+                <a class="line-text" style="margin-left: -10px;"><b>装扮商城</b></a>
+            </div>
+            <div  class="line4" ></div>
+            <script>
+                for ( var i=0;i<4;i++){
+
+                    $(".line4").after("<div class='zhuye1-1'> <a><img class='zhuye1-1-1' style='width: 100px;height: 100px;' src='image/zhuye2.jpg'></a></div>")
+                }
+            </script>
+        </div>
+        </div>
+    <div id="content" class="content" onmouseover="noshowzhuye1();noshowzhuye4();noshowzhuye2();noshowzhuye3();">
+           <div class="content-head;">
+                <div class="content-head-inner">
+                    <div class="content-head-info">
+                        <h1 class="content-head-title"><span>⊹⊱⋛⋋离殇づ╭❤～醉意流年</span></h1>
+                        <div><span class="description-text">从你的全世界路过～～</span></div>
+                    </div>
+                   <div class="content-head-inner-1">
+                       <a><img class="content-head-inner-img" src="image/zhuye2.jpg"></a>
+                   </div>
+                  <div class="content-head-inner-qqtitle">
+                        <span class="head-detail-name">爱上深海の的太阳</span>
+                               <div class="content-head-inner-qqtitle-chengzhang">
+                                   <a style="display: inline-block;" href="http://pay.qq.com/ipay/index.shtml?n=12&c=xxjzgw,xxjzghh&aid=info.nickname&ch=qdqb,kj"><img style="margin-top: 10px; " src="image/qqtitle.png"></a>
+                                   <div class="text-value">
+                                       <div style="display: inline-block;width: 190px">
+                                       <span style="margin-right: 10px;" >成长值<b>1</b></span>
+                                       <span >成长速度<b>-10点/天</b></span>
+                                       <img style="display: inline-block;margin-bottom: 15px;" src="image/qqtittlepro.png">
+                                       </div>
+                                       <a style="display: inline-block;margin-left: 10px;" title="续费黄钻" href="http://pay.qq.com/ipay/index.shtml?n=3&amp;c=xxjzgw,xxjzghh&amp;aid=info.nickname&amp;ch=qdqb,kj" ><img style="margin-bottom: 10px;" src="image/qqzhuanshi.png"></a>
+                                    </div>
+                               </div>
+                          </div>
+                       <div  id="show-item" class="show-item"  onmouseover="showedit()" onmouseout="noshowedit()">
+                       <a href="javascript:;" id="yincang" class="yincang" onclick="noshowitem()">隐藏</a>
+                       <img  style="display: inline-block;" src="image/visitor.png">
+                       <p  class="visit-today">今日访客 <span style=" text-shadow: 1px 1px 1px rgba(0,0,0,.4);">0</span></p>
+                       <p class="visit-count">访客总数 <span style=" text-shadow: 1px 1px 1px rgba(0,0,0,.4);">5520</span></p>
+                           <!--<script>-->
+                                   <!--$("#show-item").click(function () {-->
+                                       <!--window.location.href="#no1";-->
+                                   <!--})-->
+                           <!--</script>-->
+                   </div>
+                    <div class="head-nav" >
+                        <ul class="head-nav-menu ">
+                            <li><a href="javascript:;" onclick="LoadXmlDoc()">主页</a></li>
+                            <li><a href="javascript:;">日志</a></li>
+                            <li><a href="javascript:;">相册</a></li>
+                            <li><a href="javascript:;">留言板</a></li>
+                            <li><a href="javascript:;">说说</a></li>
+                            <li><a href="javascript:;">个人档</a></li>
+                            <li><a href="javascript:;">音乐</a></li>
+                            <li><a href="javascript:;">更多</a></li>
+                        </ul>
+                    </div>
+           </div>
+    </div>
+          <div id="page-content" class="page-content">
+               <div class="left-menu">
+                   <div class="left-menu1">
+                       <ul class="left-menu1-1">
+                           <li style="background-color:#f5efd5;"><a style="color:black;" href="javascript:;"><img src="image/left-menu1-1.png">好友动态</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-2.png">特别关心</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-3.png">与我相关</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-4.png">那年今日</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-5.png">游戏应用</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-6.png">我的收藏</a></li>
+                       </ul>
+                   </div>
+                   <div class="left-menu1">
+                       <ul class="left-menu1-1">
+                           <li><a style="color:black;" href="javascript:;"><img src="image/left-menu1-1.png">cf带你搞事情</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-2.png">游戏应用中心</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-3.png">蛇蛇争霸</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-4.png">猎鱼达人3d</a></li>
+                           <li><a href="javascript:;" style="color: #cc8f14">我的全部游戏应用》》</a></li>
+                           <li ><a href="javascript:;">--------热门游戏--------</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-3.png">蛇蛇争霸</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-4.png">猎鱼达人3d</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-3.png">蛇蛇争霸</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-4.png">猎鱼达人3d</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-3.png">蛇蛇争霸</a></li>
+                           <li><a href="javascript:;"><img src="image/left-menu1-4.png">猎鱼达人3d</a></li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="main-content" onmouseout="noshowtextimg();noshowtextlianjie();noshowtextqutu()">
+                   <div class="main-content-input" >
+                       <textarea   class="text-input" name="name2" rows ="3" cols="60" placeholder="说点儿什么吧" onclick="showfabiao()" onmouseover="noshowtextimg();noshowtextlianjie();noshowtextqutu()"></textarea>
+                       <div class="text-poster">
+                           <div onmouseover="showtextimg();noshowtextlianjie();noshowtextqutu()"><a href=""><img src="image/textimg1.png"></a></div>
+                           <div onmouseover="showtextlianjie();noshowtextimg();noshowtextqutu()" style="margin-left: -5px"><a href=""><img src="image/textimg2.png"></a></div>
+                           <div onmouseover="showtextqutu();noshowtextimg();noshowtextlianjie()" style="margin-left: -5px"><a href=""><img src="image/textimg3.png"></a></div>
+                       </div>
+                       <div  class="text-submit" id="fabiao" style=" display: none;">
+                           <input   class="fabiao" type="submit" value="发表">
+                       </div>
+                   </div>
+                   <div onmouseover="showtextimg()" onmouseout="noshowtextimg();" id="text-poster-img" class="text-poster-img" >
+                       <div>
+                       <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                       <a class="line-text" style="margin-top: -3px;color: #403e39"><b>本地</b></a>
+                   </div>
+                       <div>
+                           <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                           <a class="line-text" style="margin-top: -3px;color: #403e39"><b>相册</b></a>
+                       </div>
+                       <div>
+                           <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                           <a class="line-text" style="margin-top: -3px;color: #403e39"><b>截屏</b></a>
+                       </div>
+                       <div>
+                           <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                           <a class="line-text" style="margin-top: -3px;color: #403e39"><b>拼图</b></a>
+                       </div>
+                   </div>
+                   <div onmouseover="showtextlianjie()" onmouseout="noshowtextlianjie()" id="text-poster-lianjie" class="text-poster-img" style="width: 105px;">
+                       <div>
+                           <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                           <a class="line-text" style="margin-top: -3px;color: #403e39"><b>音乐</b></a>
+                       </div>
+                       <div>
+                           <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                           <a class="line-text" style="margin-top: -3px;color: #403e39"><b>视频</b></a>
+                       </div>
+                   </div>
+                   <div onmouseover="showtextqutu()" onmouseout="noshowtextqutu()" id="text-poster-qutu" class="text-poster-img" >
+                   <div>
+                       <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                       <a class="line-text" style="margin-top: -3px;color: #403e39"><b>趣图</b></a>
+                   </div>
+                   <div>
+                       <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                       <a class="line-text" style="margin-top: -3px;color: #403e39"><b>表情</b></a>
+                   </div>
+                   <div>
+                       <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                       <a class="line-text" style="margin-top: -3px;color: #403e39"><b>气泡</b></a>
+                   </div>
+                   <div>
+                       <a><img style="width: 50px;height: 40px" src="image/zhuye1.png"></a><br>
+                       <a class="line-text" style="margin-top: -3px;color: #403e39"><b>闪图</b></a>
+                   </div>
+               </div>
+                     <div class="main-content-update" ></div>
+                     <div class="feed-friends">
+                         <div class="feed-control">
+                             <div class="feed-control-1"><a href="javascript:;"><b>全部动态</b></a></div>
+                             <a href="javascript:;"><img style=" float:right;margin-right: 5px; height: 30px;" src="image/feedcontrol2.png"></a>
+                             <a href="javascript:;"><img style="float: right;margin-right: 10px; height: 30px" src="image/feedcontrol1.png"></a>
+                         </div>
+                         <div class="friends-life" >
+                             <div class="friends-life-img"></div>
+                             <div class="friends-life-name">哈哈</div>
+                             <div class="friends-life-time"  >19;80</div>
+                             <div class="friends-life-liuyan">我草</div>
+                             <div class="friends-life-content">asdada</div>
+                             <div class="friends-life-detail" >
+                                 <a class="friends-life-detail-1">浏览:123次</a>
+                                 <a><img  src="image/friends%20(3).png"></a>
+                                 <a onclick="showfabiaobig1()"><img  src="image/friends%20(2).png"></a>
+                                 <a><img style="margin-top: 2px;" src="image/friends%20(1).png"></a>
+                             </div>
+                             <div class="friends-life-like"><a href="">123</a> 共<a>12</a>人觉得很赞</div>
+                             <div class="friends-life-content-list">
+                                 <div  style="display: inline-block;">人才</div>
+                                 <div style="display: inline-block; color: black">：你这个傻逼</div>
+                             </div>
+                             <textarea  id="fabiao-input" style="margin-left: 20px;background-color: white"  class="text-input" name="name2" rows ="1" cols="77" placeholder="评论" onclick="showfabiaobig1()" onmouseover="noshowtextimg();noshowtextlianjie();noshowtextqutu()"></textarea>
+                             <div  id="fabiaos" style="background-color: #fffcf4; " class="text-submit">
+                                 <input  class="fabiao" type="submit" value="发表">
+                             </div>
+                         </div>
+                         <script>
+                             for(i=1;i<5;i++)
+                             {
+                                 $(".feed-control").after("<div class='friends-life'>" +
+                                         "<div class='friends-life-img'></div>" +
+                                 "<div class='friends-life-name'>哈哈</div>" +
+                                         " <div class='friends-life-time' >19;80</div>" +
+                                         " <div class='friends-life-liuyan'>我草</div>" +
+                                         " <div class='friends-life-content'>asdada</div>" +
+                                         " <div class='friends-life-detail' > " +
+                                         "<a class='friends-life-detail-1'>浏览:123次</a> " +
+                                         "<a><img  src='image/friends%20(3).png'></a> " +
+                                         "<a id="+'friend=life-detail-img' + i + " onclick='showfabiaobig(id)'><img  src='image/friends%20(2).png'></a> " +
+                                         "<a><img style='margin-top: 2px;'' src='image/friends%20(1).png'></a> </div> " +
+                                         "<div class='friends-life-like'><a href=''>123</a> 共<a>12</a>人觉得很赞</div> " +
+                                         "<div class='friends-life-content-list'> " +
+                                         "<div  style='display: inline-block;'>人才</div> " +
+                                         "<div style='display: inline-block; color: black'>：你这个傻逼</div> " +
+                                          "</div> " +
+                                         "<textarea  id="+'fabiao-input' + i + "  style='margin-left: 20px;background-color: white' class='text-input'  rows ='1' cols='77' placeholder='评论' onclick='showfabiaobig(id)'  onmouseover='noshowtextimg();noshowtextlianjie();noshowtextqutu() '></textarea> " +
+                                         "<div id="+'fabiao' + i + " style='background-color: #fffcf4; ' class='text-submit'> " +
+                                          "<input  class='fabiao' type='submit' value='发表'> " +
+                                         "</div>" +
+                                     "</div>")
+
+                             }
+                         </script>
+
+                     </div>
+               </div>
+               <div class="right-menu">
+                   <div id="hours" class="ck-time">
+                       <div id="hours-day" class="ck-time-day"></div>
+                       <div id="hours-year" class="ck-time-year"></div>
+                   </div>
+                   <div class="gtdads">
+                       <a href=""><img style="height: 94px;width: 194px;margin-top: 3px" src="image/gtddads1.jpg"></a>
+                   </div>
+                   <div class="container">
+                      <h6 style="margin-left: 5px;margin-top: 10px">大家都在看</h6>
+                       <div class="container-xingqu">
+                           <ul>
+                               <li>
+                                   <a  href=""><img style="width: 70px; height: 50px" src="image/zhuye2.jpg"></a>
+                                   <div class="container-xingqu-zi"><a href="">四月木槿，花开烂漫.</a></div>
+                                   <a class="container-xingqu-zikan" href="">去看看</a>
+                               </li>
+                               <li>
+                                   <a  href=""><img style="width: 70px; height: 50px" src="image/zhuye2.jpg"></a>
+                                   <div class="container-xingqu-zi"><a href="">四月木槿，花开烂漫.</a></div>
+                                   <a class="container-xingqu-zikan" href="">去看看</a>
+                               </li>
+                               <li>
+                                   <a  href=""><img style="width: 70px; height: 50px" src="image/zhuye2.jpg"></a>
+                                   <div class="container-xingqu-zi"><a href="">四月木槿，花开烂漫.</a></div>
+                                   <a class="container-xingqu-zikan" href="">去看看</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="container">
+                       <h6 style="margin-left: 5px;margin-top: 10px">礼物</h6>
+                       <div class="container-xingqu">
+                           <ul>
+                               <li>
+                                   <a  href=""><img style="width: 70px; height: 50px" src="image/zhuye2.jpg"></a>
+                                   <div  class="container-xingqu-zi"><a style="margin-top: -40px" href="">帅气的男孩</a>
+                                       <span style=" position:absolute;margin-top: -20px;color: silver">近期看过我</span></div>
+                                   <a class="container-xingqu-zikan" href="">感谢他</a>
+                               </li>
+                               <li>
+                                   <a  href=""><img style="width: 70px; height: 50px" src="image/zhuye2.jpg"></a>
+                                   <div  class="container-xingqu-zi"><a style="margin-top: -40px" href="">帅气的男孩</a>
+                                       <span style=" position:absolute;margin-top: -20px;color: silver">近期看过我</span></div>
+                                   <a class="container-xingqu-zikan" href="">感谢他</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        <!-- <div class="page-content" id="contentzhuye">
+            <div class="leftzhuye">
+                <div class="leftzhue-1">
+                <div class="leftzhue-1-1" ><a href="">703<br><span>照片</span></a></div>
+                <div class="leftzhue-1-1"><a href="">377<br><span>说说</span></a></div>
+                <div class="leftzhue-1-1" style="border: none;"><a href="">2<br><span>日志</span></a></div>
+                </div>
+                <div class="leftzhue-2">
+                    <div class="leftzhue-2-name"><h3 ><a href="">个人档</a></h3></div>
+                    <div class="leftzhue-2-passage"><h4>从你的全世界路过</h4></div>
+                    <div class="leftzhue-2-passage"> <h4><span>20岁</span>&nbsp;<span>摩羯座</span>&nbsp;<span>现居宜宾</span></h4></div>
+                </div>
+                <div class="leftzhue-2">
+                    <div class="leftzhue-2-name"><h3 ><a href="">最近访客</a></h3></div>
+                    <div class="leftzhue-2-passage"><h4><a href="">帅气的男孩</a></h4>
+                        <h4><a href="">帅气的男孩</a></h4></div>
+                  </div>
+            </div>
+            <div class="rightzhuye">
+                <div class="right-zhuye1"></div>
+                <script>
+                    for(i=1;i<5;i++)
+                    {
+                        $(".right-zhuye1").after("<div class='friends-life'>" +
+                                "<div class='friends-life-img'></div>" +
+                                "<div class='friends-life-name'>哈哈</div>" +
+                                " <div class='friends-life-time' >19;80</div>" +
+                                " <div class='friends-life-liuyan'>我草</div>" +
+                                " <div class='friends-life-content'>asdada</div>" +
+                                " <div class='friends-life-detail' > " +
+                                "<a class='friends-life-detail-1'>浏览:123次</a> " +
+                                "<a><img  src='image/friends%20(3).png'></a> " +
+                                "<a id="+'friend=life-detail-img' + i + " onclick='showfabiaobig(id)'><img  src='image/friends%20(2).png'></a> " +
+                                "<a><img style='margin-top: 2px;'' src='image/friends%20(1).png'></a> </div> " +
+                                "<div class='friends-life-like'><a href=''>123</a> 共<a>12</a>人觉得很赞</div> " +
+                                "<div class='friends-life-content-list'> " +
+                                "<div  style='display: inline-block;'>人才</div> " +
+                                "<div style='display: inline-block; color: black'>：你这个傻逼</div> " +
+                                "</div> " +
+                                "<textarea  id="+'fabiao-input' + i + "  style='margin-left: 20px;background-color: white' class='text-input'  rows ='1' cols='77' placeholder='评论' onclick='showfabiaobig(id)'  onmouseover='noshowtextimg();noshowtextlianjie();noshowtextqutu() '></textarea> " +
+                                "<div id="+'fabiao' + i + " style='background-color: #fffcf4; ' class='text-submit'> " +
+                                "<input  class='fabiao' type='submit' value='发表'> " +
+                                "</div>" +
+                                "</div>")
+                    }
+                </script>
+            </div>
+        </div>-->
+            <div class="huitop">
+                <div id="htop" class="htop">
+                   <span id="htop1">︽</span><a id="htop2" href="#content" >顶部</a>
+                    <script>
+                        $("#htop").mouseout(function () {
+                            $("#htop1").show();
+                            $("#htop2").hide();
+                        }).mouseover(function () {
+                            $("#htop1").hide();
+                            $("#htop2").show();})
+                    </script>
+                </div>
+                <div class="htop" style="font-size: 12px" >热点</div>
+            </div>
+
+</div>
+</form>
+</body>
+</html>
